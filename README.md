@@ -5,6 +5,7 @@ all credit for code to author of that link
 
 
 # Geo Distance formulas
+[![Build Status](https://travis-ci.org/jacksongeller/node-geo-distance.svg)](https://travis-ci.org/jacksongeller/node-geo-distance)
 + Vincenty
 + Haversine
 
