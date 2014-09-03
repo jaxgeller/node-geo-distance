@@ -23,11 +23,20 @@ all credit for code to author of that link
 ```js
 var geo = require('node-geo-distance');
 
+
 --> {latitude:x, longitude:x}, {latitude:x, longitude:x}, callback(dist)
 geo.vincenty(coord1, coord2, callback)
 
+--> {latitude:x, longitude:x}, {latitude:x, longitude:x}
+geo.vincentySync(coord1, coord2)
+
+
+
 --> {latitude:x, longitude:x}, {latitude:x, longitude:x}, callback(dist)
 geo.haversine(coord1, coord2, callback)
+
+--> {latitude:x, longitude:x}, {latitude:x, longitude:x}
+geo.haversineSync(coord1, coord2)
 ```
 
 ### Examples
@@ -50,7 +59,13 @@ geo.vincenty(coord1, coord2, function(dist) {
   console.log(dist);
 });
 
+var vincentyDist = geo.vincentySync(coord1, coord2);
+
+
+
 geo.haversine(coord1, coord2, function(dist) {
   console.log(dist);
 });
+
+var haversineDist = geo.haversineSync(coord1, coord2);
 ```
