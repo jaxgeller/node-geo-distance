@@ -27,7 +27,7 @@ geo.vincenty(coord1, coord2, callback)
 
 --> {latitude:x, longitude:x}, {latitude:x, longitude:x}, callback(dist)
 geo.haversine(coord1, coord2, callback)
-
+```
 
 ### Examples
 ```js
@@ -52,3 +52,4 @@ geo.vincenty(coord1, coord2, function(dist) {
 geo.haversine(coord1, coord2, function(dist) {
   console.log(dist);
 });
+```
