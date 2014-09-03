@@ -1,17 +1,17 @@
 {
   "name": "node-geo-distance",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A wrapper for haversine and vincenty distance formulas",
+  "keywords":["geo distance", "geo location", "geo", "haversine", "vincenty"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^2.4.1"
-  },
+  "author": "@JaxGeller",
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
+    "assert": "^1.1.2",
     "mocha": "^1.21.4"
   }
 }
