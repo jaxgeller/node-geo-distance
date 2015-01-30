@@ -1,11 +1,11 @@
-wrapper for http://jsperf.com/vincenty-vs-haversine-distance-calculations, 
+wrapper for http://jsperf.com/vincenty-vs-haversine-distance-calculations,
 all credit for code to author of that link
 
 
 
 
 # Geo Distance formulas
-[![Build Status](https://travis-ci.org/jacksongeller/node-geo-distance.svg)](https://travis-ci.org/jacksongeller/node-geo-distance)
+[![Build Status](https://travis-ci.org/jaxgeller/node-geo-distance.svg)](https://travis-ci.org/jaxgeller/node-geo-distance)
 + Vincenty
 + Haversine
 

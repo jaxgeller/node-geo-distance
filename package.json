@@ -1,6 +1,6 @@
 {
   "name": "node-geo-distance",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A wrapper for haversine and vincenty distance formulas",
   "keywords":["geo distance", "geo location", "geo", "haversine", "vincenty"],
   "main": "index.js",
