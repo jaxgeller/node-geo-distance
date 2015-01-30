@@ -1,6 +1,4 @@
-Number.prototype.toRad = function() {
-  return this * Math.PI / 180;
-}
+Number.prototype.toRad = function() { return this * Math.PI / 180; }
 
 exports.vincenty = function(coord1, coord2, callback) {
   var a = 6378137,
@@ -12,11 +10,10 @@ exports.vincenty = function(coord1, coord2, callback) {
   var lat2 = coord2.latitude;
   var lon2 = coord2.longitude;
 
-
   var L = (lon2 - lon1).toRad();
   var U1 = Math.atan((1 - f) * Math.tan(lat1.toRad()));
   var U2 = Math.atan((1 - f) * Math.tan(lat2.toRad()));
-  
+
   var sinU1 = Math.sin(U1),
       cosU1 = Math.cos(U1);
   var sinU2 = Math.sin(U2),
@@ -51,10 +48,6 @@ exports.vincenty = function(coord1, coord2, callback) {
   callback(s);
 }
 
-
-
-
-
 exports.vincentySync = function(coord1, coord2) {
   var a = 6378137,
       b = 6356752.314245,
@@ -65,11 +58,10 @@ exports.vincentySync = function(coord1, coord2) {
   var lat2 = coord2.latitude;
   var lon2 = coord2.longitude;
 
-
   var L = (lon2 - lon1).toRad();
   var U1 = Math.atan((1 - f) * Math.tan(lat1.toRad()));
   var U2 = Math.atan((1 - f) * Math.tan(lat2.toRad()));
-  
+
   var sinU1 = Math.sin(U1),
       cosU1 = Math.cos(U1);
   var sinU2 = Math.sin(U2),
@@ -104,11 +96,8 @@ exports.vincentySync = function(coord1, coord2) {
   return(s);
 }
 
-
-
 exports.haversine = function(coord1, coord2, callback) {
   var R = 6371;
-  
   var lat1 = coord1.latitude;
   var lon1 = coord1.longitude;
   var lat2 = coord2.latitude;
@@ -121,12 +110,11 @@ exports.haversine = function(coord1, coord2, callback) {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var d = R * c;
 
-  callback(Math.round(d));
+  return callback((d*1000).toFixed(3));
 }
 
 exports.haversineSync = function(coord1, coord2) {
   var R = 6371;
-  
   var lat1 = coord1.latitude;
   var lon1 = coord1.longitude;
   var lat2 = coord2.latitude;
@@ -139,9 +127,6 @@ exports.haversineSync = function(coord1, coord2) {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var d = R * c;
 
-  return(Math.round(d));
+  return (d*1000).toFixed(3);
 }
-
-
-
 

@@ -14,19 +14,19 @@ var coord2 = {
   longitude: -77.0352790
 }
 
-var expectedDistance = 922.169;
-
+var expectedDistanceVincenty = 922.169;
+var expectedDistanceHaversine = 923.625;
 
 describe('Vincenty', function() {
   it('should be able to get distance between two points asynchronously', function(done) {
     geoDistance.vincenty(coord1, coord2, function(dist) {
-      assert(dist, expectedDistance);
+      assert.equal(dist, expectedDistanceVincenty);
       done();
     })
   });
 
   it('should be able to get distance between two points synchronously', function(done) {
-    assert(geoDistance.vincentySync(coord1, coord2), expectedDistance);
+    assert.equal(geoDistance.vincentySync(coord1, coord2), expectedDistanceVincenty);
     done();
   });
 });
@@ -36,13 +36,13 @@ describe('Vincenty', function() {
 describe('Haversine', function() {
   it('should be able to get distance between two points asynchronously', function(done) {
     geoDistance.haversine(coord1, coord2, function(dist) {
-      assert(dist, expectedDistance);
+      assert.equal(dist, expectedDistanceHaversine);
       done();
     })
   });
 
   it('should be able to get distance between two points synchronously', function(done) {
-    assert(geoDistance.haversineSync(coord1, coord2), expectedDistance);
+    assert.equal(geoDistance.haversineSync(coord1, coord2), expectedDistanceHaversine);
     done();
   });
 });
