@@ -69,3 +69,6 @@ geo.haversine(coord1, coord2, function(dist) {
 
 var haversineDist = geo.haversineSync(coord1, coord2);
 ```
+
+### License
+MIT
